@@ -1,0 +1,212 @@
+.header{
+    position:fixed;
+    top: 0;
+    left: 0;
+
+    text-decoration: none;
+    box-sizing: border-box;
+    width: 100%;
+
+    font-family: tahoma;
+    font-weight: bold;
+    height: 70px;
+    width: 100%;
+    background: #D0B8A8;
+    box-shadow: inset 0px 0px 10px white;
+    border-radius: 0px;
+    font-size: 18px;
+    /* position:absolute; */
+
+}
+
+.logo a{
+    font-family: comic sans ms;
+    font-size: 20pt;
+    color: white;
+    background: #bda595;
+    box-shadow: inset 0px 0px 5px white;
+    text-shadow: 3px 2px 1px black;
+    margin: 0px;
+    padding: 25px;
+    float: left;
+    border-bottom-right-radius: 50px;
+}
+
+.home{
+    margin: 0px;
+    padding: 5px;
+    background: none;
+    display: block;
+    float: right;
+    
+}
+
+.home li{
+    list-style: none;
+    display: inline-block;
+}
+
+.home li a{
+    display: block;
+    text-decoration: none;
+
+    font-family: sans-serif;
+    font-size: 15px;
+
+    border-radius: 5px;
+    padding: 12px 20px;
+    margin-top: 10px;
+
+    background: #917d52;
+    color: white;
+    border: white 3px solid;
+
+    /* transition: 0.4s; */
+    
+}
+
+.home li a:hover{
+    /* text-decoration: none; */
+    display: block; 
+    color: #917d52;
+    background-color:#DFD3C3;
+    box-shadow: inset 0px 0px 3px black;
+    text-shadow: 2px 0px 1px white;
+    transition: 0.4s;
+    
+    
+}
+
+/* membuat dropdown dari tombol menu */
+.home li .dropdown{
+    display: none;
+}
+
+.home li:hover .dropdown{
+    display: block;
+    background: #D0B8A8;
+    position:absolute;
+    padding: 10px;
+}
+
+.home li:hover .dropdown li{
+    display: block;
+}
+
+.home li:hover .dropdown li a{
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: 0.5s;
+}
+
+.home li:hover .dropdown li a:hover{
+
+    background-color:#DFD3C3;
+    box-shadow:inset 0px 0px 5px #EEEEEE;
+}
+
+/* membuat tampilan mobile */
+.mobile-menu{
+    float: right;
+    display: none;
+    padding: 16px;
+}
+
+#check{
+    display: none;
+}
+
+#check:checked ~ .sidebar{
+    left: -6px;
+    
+}
+
+.sidebar {
+    padding: 0px;
+    position: fixed;
+    top: -3px;
+    bottom: -3px;
+    left: -306px;
+    width: 300px;
+    list-style: none;
+    display: none;
+
+    background:#c4ad9e;
+    color: white;
+    border: #e4d2ba 2px solid;
+    transition: 1s;
+}
+
+.sidebar li{
+    padding: 0px;
+    font-size: small;
+    border: 1px #e4d2ba;
+}
+
+.sidebar li a{
+    color: white;
+    display: block;
+    padding: 24px;
+    text-decoration: none;
+    border: #e4d2ba 2px solid;
+    /* box-shadow: 4px 3px 2px #917d52; */
+
+    font-family: sans-serif;
+    transition: 0.6s;
+}
+
+.sidebar li a:hover{
+    color: #917d52;
+    background-color:#DFD3C3;;
+    text-shadow:inset 0px 0px 10px black;
+}
+
+.sidebar li .drp-down{
+    transition: 8s;
+    display: none;
+    
+}
+
+.sidebar li:hover .drp-down{
+    display: block;
+    position: relative;
+    display: block;
+    background: #D0B8A8;
+    border: #e4d2ba 2px solid;
+    /* box-shadow: 4px 3px 2px #917d52; */
+    list-style: armenian;
+    transition: 7s;
+    /* padding: 15px; */
+}
+
+.sidebar li:hover .drp-down li{
+    display: block;
+}
+
+.sidebar li:hover .drp-down li a{
+    padding: 15px;
+    padding-left: 30px;
+    transition: 0,7s;
+}
+.sidebar li:hover .drp-down li a:hover{
+    background-color:#DFD3C3;
+    /* box-shadow:inset 0px 0px 5px #917d52; */
+
+    color: #917d52;;
+    /* background-color:#917d52; */
+    text-shadow:inset 0px 0px 10px black
+}
+
+@media (max-width: 785px) {
+    .mobile-menu{
+        display: block;
+    }
+
+    .sidebar{
+        display: block;
+    }
+    .header ul li{
+        display: none;
+    }
+}
